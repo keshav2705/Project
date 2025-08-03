@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>EmotionSense | Cloud-Based Therapy Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">EmotionSense</h1>
+        <p class="tagline">
+          Understand your emotions through AI-powered therapy
+        </p>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="text-input-section">
+        <h2>📝 How are you feeling today?</h2>
+        <form id="emotionForm">
+          <textarea
+            id="emotionText"
+            name="emotionText"
+            placeholder="Describe your mood or challenges..."
+            required
+          ></textarea>
+          <button type="submit">Analyze Emotion</button>
+        </form>
+      </section>
+
+      <section class="audio-section">
+        <h2>🎙 Talk to us</h2>
+        <p>Record your voice to analyze tone and stress levels.</p>
+        <div class="audio-controls">
+          <button id="startAudio">Start Recording</button>
+          <button id="stopAudio" disabled>Stop Recording</button>
+          <audio id="audioPlayer" controls style="display: none"></audio>
+        </div>
+      </section>
+
+      <section class="video-section">
+        <h2>📹 Live Camera (Facial Expression)</h2>
+        <p>Facial emotion analysis for deeper insights.</p>
+        <video id="videoFeed" autoplay playsinline muted></video>
+      </section>
+
+      <section class="result-section" id="resultSection" style="display: none">
+        <h2>🎯 Detected Emotion</h2>
+        <div id="emotionResult">Waiting for prediction...</div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2025 EmotionSense | Empowering Remote Mental Wellness</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
